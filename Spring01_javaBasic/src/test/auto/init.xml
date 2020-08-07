@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:c="http://www.springframework.org/schema/c"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="e1" class="test.auto.Engine"/>
+    <bean id="car1" class="test.auto.Car">
+    	<constructor-arg name="engine" ref="e1" />
+    </bean>
+    
+    <bean id="sedan1" class="test.auto.Sedan">
+    	<property name="name" value="쏘나타" />
+    	<property name="weight" value="1000" />
+    	<property name="engine" value="e1" />
+    </bean>
+</beans>
