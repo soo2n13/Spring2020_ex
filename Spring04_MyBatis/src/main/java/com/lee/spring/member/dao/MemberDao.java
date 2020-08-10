@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.lee.spring.member.dto.MemberDto;
 
-@Service
 public interface MemberDao {
 	public void insert(MemberDto dto);
 	public void update(MemberDto dto);

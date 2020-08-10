@@ -36,6 +36,10 @@
 		<beans:property name="configLocation"
 	value="classpath:com/lee/spring/mybatis/Configuration.xml"/>
 	</beans:bean>
+	
+	<!-- com.lee.spring 하위 패키지를 모두 스캔해서 bean으로 만들 것들은 만들어서 관리 
+		 @controller, @service, @repository, @component .. 등등이 붙어있는 클래스로 캑체를 생성
+	-->
 	<!-- 
 		sessionFactory=new SqlSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource);

@@ -3,9 +3,15 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
   
+  
   <configuration>
-  	<mappers>
+  	<typeAliases>
+  		<typeAlias type="com.lee.spring.member.dto.MemberDto" alias="memberDto"/>
+  		<typeAlias type="com.lee.spring.todo.dto.TodoDto" alias="todoDto"/>
+  	</typeAliases>
+  	<mappers>  <!-- 사용할 mapper 설정 -->
   		<mapper resource="com/lee/spring/mybatis/MemberMapper.xml"/>
+  		<mapper resource="com/lee/spring/mybatis/TodoMapper.xml"/>
   	</mappers>
   </configuration>
   
