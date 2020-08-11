@@ -21,7 +21,12 @@
 			<li><a href="json8.do">json 처리8</a></li>
 			<li><a href="xml01.do">xml 처리1</a></li>
 			<li><a href="xml02.do">xml 처리2</a></li>
+			<li><a href="xml03.do">xml 처리3</a></li>
 			<button id="testBtn">연습 버튼</button>
+			<form action="upload.do" method="post" enctype="multipart/form-data">
+				<input type="file" name="myFile" />
+				<button type="submit">전송</button>
+			</form>
 		</ul>
 	</div>
 	<script src="${pageContext.request.contextPath}/js/jquery-3.5.1.min.js"></script>

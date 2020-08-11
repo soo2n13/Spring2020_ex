@@ -1,5 +1,8 @@
 package com.lee.spring;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,5 +24,20 @@ public class XmlTestController {
 		d.setName("lee");
 		
 		return d;
+	}
+	
+	@RequestMapping("/xml03")
+	@ResponseBody
+	public HobbyList xml03() {
+		List<String> hobby=new ArrayList<String>();
+		
+		hobby.add("java");
+		hobby.add("jsp");
+		hobby.add("spring");
+		
+		HobbyList list=new HobbyList();
+		list.setHobby(hobby);
+		
+		return list;
 	}
 }
